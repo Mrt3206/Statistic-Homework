@@ -1,0 +1,54 @@
+1)Titanic(titanic.csv) data and write down what the columns mean and what values are they composed of?
+
+PassengerId- Passenger Id - Nominal
+Pclass - Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd) - Ordinal Level
+Name - Name - Nominal
+Sex - Sex - Ordinal (male ;female)
+Age - Age - Ratio Level (float)
+Sibsp - Number of Siblings/Spouses Aboard (integer) ratio level
+Parch - Number of Parents/Children Aboard (integer) ratio level
+Ticket - Ticket Number Nominal text
+Fare - Passenger Fare Ratio Level flaot
+Cabin - Cabin  Nominal Level text
+Embarked - Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton) Ordinal 
+
+2)Which are the two columns with the highest correlation in Titanic data?
+
+Fare and Pclass -0.6
+Age-Pclass   -0.5
+
+3)For “Fare” columns in Titanic data find
+a) maximum, minimum  512.329200, 0.000000
+b) mean              35.627188
+c) mode				7.75
+d) median			14.454200
+and
+f) Draw the graph boxplot
+melted_data = pd.melt(data,id_vars = "diagnosis",value_vars = ['radius_mean'])
+sns.boxplot(x = "variable", y = "value", hue="diagnosis",data= melted_data)
+plt.show()
+blob:vscode-webview://0uf0qjchtfhndrde7b0o1oidq6gfe2g2et8aufp72u91ijp67m5k/f6b31782-1b7d-408a-b203-3657e4a9dc76
+
+4) “penguins”(peguins.csv) data . Find
+
+a) How many rows and columns    344 rows x 7 columns
+
+b) Find the 2 columns with the highest correlation and draw this in the scatterplot?
+
+	flipper_length_mm and body_mass_g    0.9
+	flipper_length_mm and bill_length_mm  0.7
+	
+5) The column "bill_length_mm" of penguins data, find:
+
+a) mean					    43.921930
+b) minimum, maximum     32.100000, 59.600000
+c) mode					41.1
+d) median				44.450000
+e) Draw the graph boxplot
+
+6) Find the standard deviations of the columns of penguins data in the Seaborn library and interpret the results?
+
+bill_length_mm         5.451596
+bill_depth_mm          1.971904
+flipper_length_mm     14.041141
+body_mass_g          800.781229
